@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-主页<br>
+<a href="${pageContext.request.contextPath }/regist.jsp">主页</a><br>
 <a href="${pageContext.request.contextPath }/regist.jsp">注册</a><br>
 <a href="${pageContext.request.contextPath }/login.jsp">登录</a>
 </body>
