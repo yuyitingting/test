@@ -9,4 +9,6 @@ public interface UserMapper {
     //检查用户名和密码是否匹配
     User checkUsernameAndPassword(@Param("username" )String username, @Param("password") String password);
 
+    //用户注册
+    int insertUser(@Param("user")User user);
 }

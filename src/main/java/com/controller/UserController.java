@@ -34,4 +34,18 @@ public class UserController {
         }
         return "/login.jsp";
     }
+
+    @RequestMapping("regist")
+    public String regist(String username,String password,Model model){
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(password);
+        int i = userService.insertUser(user);
+        if (i == 1){
+            return "/regsuccess.jsp";
+        }else {
+            model.addAttribute("state","系统出现错误，请重试！");
+        }
+        return "/regist.jsp";
+    }
 }
